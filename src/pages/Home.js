@@ -66,15 +66,15 @@ export const Home = () => {
             <div>
               {/* Badge */}
 
-              <div className="inline-flex items-center gap-2 rounded-full bg-white shadow-premium border border-primary-100 px-5 py-2 text-sm font-medium text-primary-700">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white shadow-premium border border-primary-100 px-5 py-2 text-xs sm:text-sm font-medium text-primary-700">
                 🚀 Trusted by 250,000+ Learners Worldwide
               </div>
 
               {/* Heading */}
 
-              <h1 className="mt-8 text-5xl lg:text-5xl font-heading font-extrabold leading-tight text-neutral-900">
+              <h1 className="mt-8 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold leading-tight text-neutral-900">
                 Become
-                <span className="bg-hero-gradient bg-clip-text text-transparent mx-3">
+                <span className="bg-hero-gradient bg-clip-text text-transparent mx-1.5 sm:mx-3 block sm:inline">
                   Industry Ready
                 </span>
                 with Real Projects
@@ -82,7 +82,7 @@ export const Home = () => {
 
               {/* Description */}
 
-              <p className="mt-6 text-md leading-6 text-neutral-600 max-w-xl">
+              <p className="mt-6 text-sm sm:text-md leading-6 text-neutral-600 max-w-xl">
                 Learn from industry experts, build production-ready projects,
                 earn verified certificates, and accelerate your career with
                 job-focused courses in Development, Design, AI, Marketing, and
@@ -91,10 +91,10 @@ export const Home = () => {
 
               {/* SEARCH */}
 
-              <div className="mt-10 flex flex-col sm:flex-row bg-white rounded-2xl shadow-premium border border-neutral-200 overflow-hidden">
-                <div className="flex items-center flex-1 px-5">
+              <div className="mt-8 flex flex-col sm:flex-row bg-white rounded-2xl shadow-premium border border-neutral-200 overflow-hidden">
+                <div className="flex items-center flex-1 px-5 border-b border-neutral-100 sm:border-b-0">
                   <svg
-                    className="w-5 h-5 text-neutral-400"
+                    className="w-5 h-5 text-neutral-400 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -107,50 +107,50 @@ export const Home = () => {
                   <input
                     type="text"
                     placeholder="Search courses, skills, technologies..."
-                    className="w-full px-4 py-5 outline-none text-neutral-700 placeholder:text-neutral-400"
+                    className="w-full px-4 py-4 sm:py-5 text-xs sm:text-sm outline-none text-neutral-700 placeholder:text-neutral-400 bg-transparent"
                   />
                 </div>
 
-                <button className="bg-primary-800 text-white px-8 py-5 font-semibold hover:scale-105 transition duration-300">
+                <button className="bg-primary-800 text-white px-8 py-4 sm:py-5 text-xs sm:text-sm font-semibold hover:bg-primary-900 transition duration-300 w-full sm:w-auto">
                   Search
                 </button>
               </div>
 
               {/* CTA */}
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <button className="bg-secondary-800 text-white px-8 py-4 rounded-xl shadow-premium hover:shadow-premium-hover transition duration-300 hover:-translate-y-1">
-                  Start Learning Free
-                </button>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="#enroll_now" className="w-full sm:w-auto bg-secondary-800 text-white px-8 py-4 rounded-xl shadow-premium hover:shadow-premium-hover transition duration-300 hover:-translate-y-1 text-center justify-center flex font-semibold">
+                  Enroll Now
+                </a>
 
-                <button className="border border-secondary-800 bg-white text-secondary-700 px-8 py-4 rounded-xl hover:bg-secondary-50 transition">
+                <a href="/courses" className="w-full sm:w-auto border border-secondary-800 bg-white text-secondary-700 px-8 py-4 rounded-xl hover:bg-secondary-50 transition text-center justify-center flex font-semibold">
                   Explore Courses
-                </button>
+                </a>
               </div>
             </div>
 
             {/* RIGHT CONTENT */}
 
-            <div className="relative">
+            <div className="relative mt-10 lg:mt-0">
               {/* Glow */}
 
               <div className="absolute inset-0 bg-hero-gradient opacity-20 blur-3xl rounded-full"></div>
 
               {/* Main Card */}
 
-              <div className="relative bg-white/70 rounded-3xl shadow-md border border-white/60 p-5 pb-0 flex ms-auto w-[70%]">
+              <div className="relative bg-white/70 rounded-3xl shadow-md border border-white/60 p-4 sm:p-5 pb-0 flex mx-auto lg:ms-auto lg:mr-0 w-full max-w-sm sm:max-w-md lg:w-[80%]">
                 <img
                   src="images/office-girl.png"
                   alt=""
-                  className="rounded-4xl w-full h-[500px] object-contain"
+                  className="rounded-4xl w-full h-[300px] sm:h-[400px] lg:h-[500px] object-contain"
                 />
 
                 {/* Top Right */}
 
-                <div className="absolute top-8 -right-10 backdrop-blur-xl bg-white/90 rounded-2xl shadow-xl px-5 py-4 border border-white">
-                  <p className="text-yellow-500 text-2xl">⭐ 4.9</p>
+                <div className="absolute top-8 -right-4 sm:-right-8 backdrop-blur-xl bg-white/90 rounded-2xl shadow-xl px-4 py-3 sm:px-5 sm:py-4 border border-white">
+                  <p className="text-yellow-500 text-xl sm:text-2xl font-bold">⭐ 4.9</p>
 
-                  <span className="text-neutral-500 text-sm">
+                  <span className="text-neutral-500 text-xs sm:text-sm">
                     Course Rating
                   </span>
                 </div>
@@ -369,6 +369,9 @@ export const Home = () => {
                   <div className="flex items-center justify-between text-[11px] text-neutral-400">
                     <span className="flex items-center gap-1">
                       <Icons.Clock className="h-3 w-3" /> {course.duration}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Icons.Users className="h-3 w-3" /> {course.studentCount.toLocaleString()}
                     </span>
                     <span className="flex items-center gap-1">
                       <Icons.BookOpen className="h-3 w-3" />{" "}
@@ -718,7 +721,7 @@ export const Home = () => {
       </section>
 
       {/* 10. Newsletter Signup Section */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6" id="enroll_now">
         <div className="bg-hero-gradient from-primary-600 to-indigo-800 rounded-2xl p-8 sm:p-12 text-center text-white relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent)] pointer-events-none" />
           <div className="relative max-w-xl mx-auto space-y-6">

@@ -4,8 +4,8 @@ import { useAuth } from '../hooks/useAuth';
 import { Avatar } from '../components/Avatar';
 import { Button } from '../components/Button';
 import { Badge } from '../components/Badge';
-import { 
-  BookOpen, LayoutDashboard, Settings, Award, LogOut, 
+import {
+  BookOpen, LayoutDashboard, Settings, Award, LogOut,
   Menu, X, Bell, Search, Compass, BookOpenCheck, Shield
 } from 'lucide-react';
 
@@ -43,7 +43,7 @@ export const DashboardLayout = () => {
   return (
     <div className="min-h-screen bg-neutral-50 flex">
       {/* Sidebar Panel - Desktop */}
-      <aside 
+      <aside
         className={`
           bg-white border-r border-neutral-200/80 fixed inset-y-0 left-0 z-30 transition-all duration-300
           ${sidebarOpen ? 'w-64' : 'w-20'}
@@ -76,8 +76,8 @@ export const DashboardLayout = () => {
                   to={link.path}
                   className={`
                     flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors
-                    ${isActive 
-                      ? 'bg-primary-50 text-primary-600' 
+                    ${isActive
+                      ? 'bg-primary-50 text-primary-600'
                       : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
                     }
                     ${!sidebarOpen && 'justify-center'}
@@ -124,7 +124,7 @@ export const DashboardLayout = () => {
 
       {/* Sidebar - Mobile Drawer */}
       {!sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-neutral-900/40 backdrop-blur-sm z-40 md:hidden"
           onClick={toggleSidebar}
         />
@@ -193,7 +193,7 @@ export const DashboardLayout = () => {
       </aside>
 
       {/* Main Body */}
-      <div 
+      <div
         className={`
           flex-grow min-h-screen flex flex-col transition-all duration-300
           ${sidebarOpen ? 'md:pl-64' : 'md:pl-20'}
@@ -217,7 +217,7 @@ export const DashboardLayout = () => {
           <div className="flex items-center gap-4">
             {/* Notification Icon */}
             <div className="relative">
-              <button 
+              <button
                 onClick={() => {
                   setNotificationsOpen(!notificationsOpen);
                   setUnreadNotifications(0);

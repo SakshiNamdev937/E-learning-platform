@@ -9,7 +9,7 @@ import { Avatar } from '../components/Avatar';
 import { RatingStars } from '../components/RatingStars';
 import { 
   Search, SlidersHorizontal, Heart, Clock, BookOpen, 
-  X, Check, ChevronDown, Award, Star 
+  X, Check, ChevronDown, Award, Star, Users 
 } from 'lucide-react';
 
 export const CourseList = () => {
@@ -368,6 +368,7 @@ export const CourseList = () => {
                       {/* Info items */}
                       <div className="flex items-center justify-between text-[10px] text-neutral-400 font-semibold border-t border-neutral-100 pt-3">
                         <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5 text-neutral-400" /> {course.duration}</span>
+                        <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5 text-neutral-400" /> {course.studentCount.toLocaleString()}</span>
                         <span className="flex items-center gap-1"><BookOpen className="h-3.5 w-3.5 text-neutral-400" /> {course.lessonsCount} lessons</span>
                       </div>
 

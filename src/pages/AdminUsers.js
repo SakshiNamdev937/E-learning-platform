@@ -9,7 +9,7 @@ import { Badge } from '../components/Badge';
 import { Avatar } from '../components/Avatar';
 import { 
   Plus, Search, Edit3, Trash2, X, Check,
-  User, Mail, Phone, UserCheck, ShieldAlert
+  User, Mail, Phone, UserCheck, ShieldAlert, Download
 } from 'lucide-react';
 
 export const AdminUsers = () => {
@@ -139,6 +139,35 @@ export const AdminUsers = () => {
     updateUserRole(userId, nextRole);
   };
 
+  const handleExportCSV = () => {
+    // Generate CSV content from users list
+    const headers = ['User ID', 'Name', 'Email', 'Mobile', 'Role', 'Status', 'Join Date'];
+    const rows = users.map(u => [
+      u.id,
+      u.name,
+      u.email,
+      u.mobile,
+      u.role,
+      u.status,
+      u.joinDate
+    ]);
+    
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(r => r.map(val => `"${String(val).replace(/"/g, '""')}"`).join(','))
+    ].join('\n');
+    
+    // Create download link
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `edusphere_users_${Date.now()}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="space-y-6">
       
@@ -148,16 +177,26 @@ export const AdminUsers = () => {
           <h2 className="font-heading font-extrabold text-xl text-neutral-900 leading-tight">User Directory</h2>
           <p className="text-xs text-neutral-500">Manage student accounts, roles, access permissions, and profiles.</p>
         </div>
-        <Button 
-          onClick={() => {
-            resetAdd();
-            setAddModalOpen(true);
-          }}
-          iconLeft={<Plus className="h-4.5 w-4.5" />}
-          className="shadow-sm hover:shadow-md"
-        >
-          Add New User
-        </Button>
+        <div className="flex items-center gap-3 w-full sm:w-auto">
+          <Button 
+            onClick={handleExportCSV}
+            variant="outline"
+            iconLeft={<Download className="h-4.5 w-4.5" />}
+            className="shadow-sm w-full sm:w-auto"
+          >
+            Export Directory
+          </Button>
+          <Button 
+            onClick={() => {
+              resetAdd();
+              setAddModalOpen(true);
+            }}
+            iconLeft={<Plus className="h-4.5 w-4.5" />}
+            className="shadow-sm hover:shadow-md w-full sm:w-auto"
+          >
+            Add New User
+          </Button>
+        </div>
       </div>
 
       {/* Filters Bar */}

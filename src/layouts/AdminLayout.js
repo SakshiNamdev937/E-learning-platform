@@ -3,8 +3,8 @@ import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { Avatar } from '../components/Avatar';
 import { Badge } from '../components/Badge';
-import { 
-  BookOpen, Users, FolderKanban, ShieldAlert, LogOut, 
+import {
+  BookOpen, Users, FolderKanban, ShieldAlert, LogOut,
   Menu, X, Bell, LayoutGrid, ArrowLeftRight
 } from 'lucide-react';
 
@@ -32,12 +32,13 @@ export const AdminLayout = () => {
   const sidebarLinks = [
     { label: 'Manage Courses', path: '/admin/courses', icon: FolderKanban },
     { label: 'Manage Users', path: '/admin/users', icon: Users },
+    { label: 'Profile', path: '/admin/profile', icon: Users },
   ];
 
   return (
     <div className="min-h-screen bg-neutral-50 flex">
       {/* Desktop Sidebar */}
-      <aside 
+      <aside
         className={`
           bg-neutral-900 text-neutral-300 fixed inset-y-0 left-0 z-30 transition-all duration-300
           ${sidebarOpen ? 'w-64' : 'w-20'}
@@ -78,8 +79,8 @@ export const AdminLayout = () => {
                   to={link.path}
                   className={`
                     flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors
-                    ${isActive 
-                      ? 'bg-neutral-800 text-white border-l-2 border-primary-500' 
+                    ${isActive
+                      ? 'bg-neutral-800 text-white border-l-2 border-primary-500'
                       : 'text-neutral-400 hover:bg-neutral-800/50 hover:text-white'
                     }
                     ${!sidebarOpen && 'justify-center'}
@@ -123,7 +124,7 @@ export const AdminLayout = () => {
 
       {/* Mobile Drawer Sidebar */}
       {!sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-neutral-950/60 backdrop-blur-sm z-40 md:hidden"
           onClick={toggleSidebar}
         />
@@ -190,7 +191,7 @@ export const AdminLayout = () => {
       </aside>
 
       {/* Main Content Pane */}
-      <div 
+      <div
         className={`
           flex-grow min-h-screen flex flex-col transition-all duration-300
           ${sidebarOpen ? 'md:pl-64' : 'md:pl-20'}
