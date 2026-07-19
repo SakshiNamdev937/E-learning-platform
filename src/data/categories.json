@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cat_1",
+    "name": "Web Development",
+    "icon": "Code",
+    "courseCount": 15,
+    "slug": "development"
+  },
+  {
+    "id": "cat_2",
+    "name": "UI/UX & Design",
+    "icon": "Palette",
+    "courseCount": 8,
+    "slug": "design"
+  },
+  {
+    "id": "cat_3",
+    "name": "Business & Finance",
+    "icon": "Briefcase",
+    "courseCount": 12,
+    "slug": "business"
+  },
+  {
+    "id": "cat_4",
+    "name": "Digital Marketing",
+    "icon": "Megaphone",
+    "courseCount": 6,
+    "slug": "marketing"
+  },
+  {
+    "id": "cat_5",
+    "name": "Photography & Video",
+    "icon": "Camera",
+    "courseCount": 4,
+    "slug": "photography"
+  },
+  {
+    "id": "cat_6",
+    "name": "Personal Growth",
+    "icon": "TrendingUp",
+    "courseCount": 10,
+    "slug": "personal-development"
+  }
+]

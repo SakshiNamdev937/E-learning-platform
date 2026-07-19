@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq_1",
+    "question": "Are these courses self-paced or do they have schedules?",
+    "answer": "All courses on EduSphere are 100% self-paced. Once enrolled, you gain lifetime access to all learning materials, curriculum updates, and code repositories, allowing you to learn on your own schedule."
+  },
+  {
+    "id": "faq_2",
+    "question": "Can I obtain certificates for completed courses?",
+    "answer": "Yes! When you complete 100% of the lessons in any course, a digital certificate is automatically generated. You can download it as a PDF or add it to your LinkedIn profile."
+  },
+  {
+    "id": "faq_3",
+    "question": "Is there a refund policy if I am not satisfied?",
+    "answer": "We offer a 30-day money-back guarantee for all course enrollments. If you find the course isn't a fit for you, simply request a refund from your student dashboard, and we'll credit you back in full, no questions asked."
+  },
+  {
+    "id": "faq_4",
+    "question": "Can I access courses offline or on mobile?",
+    "answer": "Absolutely. Our web application is optimized for mobile browser access. You can watch videos, read files, and write comments smoothly from any mobile device or tablet."
+  }
+]

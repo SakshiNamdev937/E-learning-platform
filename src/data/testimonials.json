@@ -1,0 +1,26 @@
+[
+  {
+    "id": "t_1",
+    "userName": "Emily Watson",
+    "userRole": "Junior Frontend Dev",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100",
+    "comment": "EduSphere literally transformed my career. The React track is better than my entire 4-year university curriculum! The premium UI detail and direct code walkthroughs got me hired in 3 months.",
+    "rating": 5
+  },
+  {
+    "id": "t_2",
+    "userName": "Marcus Miller",
+    "userRole": "UI Designer",
+    "userAvatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100",
+    "comment": "The Figma systems course is brilliant. In-depth explanations of variable mapping that I haven't found in any other video tutorials online. Highly recommend!",
+    "rating": 5
+  },
+  {
+    "id": "t_3",
+    "userName": "David Chen",
+    "userRole": "Tech Co-Founder",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100",
+    "comment": "Marcus Chen's startup financial course is a cheat-code. I was able to model our Seed Round Cap Table in one afternoon. Our lead VCs were highly impressed by the model clarity.",
+    "rating": 4
+  }
+]

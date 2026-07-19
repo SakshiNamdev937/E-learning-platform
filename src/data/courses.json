@@ -1,0 +1,468 @@
+[
+  {
+    "id": "course_1",
+    "title": "React Front-to-Back: Modern Web Development",
+    "subtitle": "Master React 18, React Router v6, Hooks, Context API, and state management by building real-world projects.",
+    "description": "This course is the ultimate guide to mastering React from absolute scratch. You will learn modern concepts including Hooks, Context API, state management, and performance tools. By the end of this course, you will have built several real-world projects, including a dynamic dashboard and a fully functional e-commerce frontend. We focus on clean code and production-level architectures, avoiding unnecessary complexities and focusing on practical skills that employers look for.",
+    "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=1200",
+    "category": "Web Development",
+    "level": "All Levels",
+    "duration": "14h 30m",
+    "lessonsCount": 42,
+    "price": 94.99,
+    "originalPrice": 149.99,
+    "instructorId": "inst_1",
+    "rating": 4.8,
+    "ratingCount": 1840,
+    "studentCount": 35400,
+    "status": "Published",
+    "tags": ["React", "JavaScript", "Frontend", "Web Dev"],
+    "learningOutcomes": [
+      "Build modern, fast, responsive React applications from scratch",
+      "Understand the mechanics of React 18 rendering, fiber, and concurrent features",
+      "Master routing using React Router v6 and implement complex layouts",
+      "Manage clean global state using context and state composition",
+      "Write clean, maintainable code using best practices and folder organization"
+    ],
+    "requirements": [
+      "Basic understanding of HTML, CSS, and modern JavaScript (ES6+)",
+      "A computer with Node.js and a code editor (like VS Code) installed"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Course Introduction & Setup",
+        "lessons": [
+          { "title": "Welcome to the Course & Overview", "duration": "08:15", "isPreview": true },
+          { "title": "Setting Up Your Development Environment", "duration": "12:30", "isPreview": false },
+          { "title": "Your First React App in 5 Minutes", "duration": "10:45", "isPreview": true }
+        ]
+      },
+      {
+        "sectionTitle": "React Fundamentals Deep Dive",
+        "lessons": [
+          { "title": "Understanding JSX and Rendering", "duration": "15:20", "isPreview": false },
+          { "title": "Props, State, and Events", "duration": "22:10", "isPreview": false },
+          { "title": "Conditional Rendering and Lists", "duration": "18:40", "isPreview": false }
+        ]
+      },
+      {
+        "sectionTitle": "Advanced Hooks & Routing",
+        "lessons": [
+          { "title": "Mastering useEffect & Custom Hooks", "duration": "28:30", "isPreview": false },
+          { "title": "React Router v6: Core Navigation", "duration": "24:15", "isPreview": false },
+          { "title": "Protected Routes and Authentication Guards", "duration": "19:50", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "rev_1",
+        "userName": "Thomas Shelby",
+        "userAvatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100",
+        "rating": 5,
+        "comment": "Outstanding course! Sarah has a gift for breaking down complex React concepts. The practical projects really solidified my understanding.",
+        "date": "2026-05-12"
+      },
+      {
+        "id": "rev_2",
+        "userName": "Chloe Fraser",
+        "userAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100",
+        "rating": 4,
+        "comment": "Very thorough content. I appreciated the emphasis on modern React 18 features and React Router v6. Wish there were a few more quizzes, but overall amazing.",
+        "date": "2026-06-01"
+      }
+    ]
+  },
+
+  {
+    "id": "course_3",
+    "title": "Financial Modeling for Founders & Startup Investors",
+    "subtitle": "Learn spreadsheet modeling, projections, SaaS metrics, cap tables, valuation techniques, and unit economics.",
+    "description": "Learn the business planning skills used by top startup founders and VC analysts. Build interactive revenue models, cost forecasts, cap tables, and perform discounted cash flow valuations from scratch using Google Sheets or Excel.",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    "category": "Business & Finance",
+    "level": "Intermediate",
+    "duration": "11h 20m",
+    "lessonsCount": 30,
+    "price": 119.99,
+    "originalPrice": 199.99,
+    "instructorId": "inst_3",
+    "rating": 4.7,
+    "ratingCount": 850,
+    "studentCount": 15600,
+    "status": "Published",
+    "tags": ["Finance", "Excel", "SaaS", "Startups"],
+    "learningOutcomes": [
+      "Build a complete 3-statement financial model for SaaS and Transactional businesses",
+      "Analyze unit economics including CAC, LTV, Churn, and Payback Period",
+      "Model equity dilution, seed rounds, and construct startup cap tables",
+      "Determine business value using multiple valuation methodologies"
+    ],
+    "requirements": [
+      "Basic familiarity with Google Sheets or Microsoft Excel",
+      "Fundamental understanding of business variables"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Modeling Fundamentals",
+        "lessons": [
+          { "title": "Welcome and Finance Glossary", "duration": "09:50", "isPreview": true },
+          { "title": "Building blocks of a 3-statement model", "duration": "18:40", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_4",
+    "title": "Advanced SEO Masterclass: Drive 1M+ Monthly Traffic",
+    "subtitle": "Master technical SEO, on-page optimization, content strategy, link building, and keyword research.",
+    "description": "Unlock search engine traffic at scale. This course takes you past standard meta tags into advanced programmatic SEO, indexation mechanics, backlink sourcing networks, and conversion rate optimization (CRO) strategies.",
+    "thumbnail": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200",
+    "category": "Digital Marketing",
+    "level": "Advanced",
+    "duration": "8h 45m",
+    "lessonsCount": 24,
+    "price": 79.99,
+    "originalPrice": 129.99,
+    "instructorId": "inst_4",
+    "rating": 4.8,
+    "ratingCount": 670,
+    "studentCount": 12400,
+    "status": "Published",
+    "tags": ["SEO", "Marketing", "Growth", "Traffic"],
+    "learningOutcomes": [
+      "Execute high-impact keyword research using professional SEO suites",
+      "Diagnose and resolve crawl budget and technical indexation issues",
+      "Design and automate authority link building campaigns that get links",
+      "Optimize local SEO signals and Google Business profiles"
+    ],
+    "requirements": [
+      "Access to an active website or blog (WordPress, React, etc.) is recommended",
+      "Basic understanding of Google Search Console"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Technical SEO Deep Dive",
+        "lessons": [
+          { "title": "How Search Engines Index Modern Web Apps", "duration": "14:10", "isPreview": true },
+          { "title": "Robots.txt, Sitemaps, and Crawl Budgets", "duration": "18:30", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_5",
+    "title": "Mastering Portrait Photography & Studio Lighting",
+    "subtitle": "Understand manual camera settings, natural lighting, studio strobe equipment, and portrait retouching.",
+    "description": "Learn to capture striking, professional portraits in any environment. Get a complete breakdown of manual camera settings, lens choices, color theory, flash techniques, and Lightroom post-processing workflow.",
+    "thumbnail": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1200",
+    "category": "Photography & Video",
+    "level": "Beginner",
+    "duration": "10h 15m",
+    "lessonsCount": 35,
+    "price": 69.99,
+    "originalPrice": 119.99,
+    "instructorId": "inst_5",
+    "rating": 4.9,
+    "ratingCount": 980,
+    "studentCount": 18200,
+    "status": "Published",
+    "tags": ["Photography", "Studio Lighting", "Lightroom", "Portraits"],
+    "learningOutcomes": [
+      "Master manual exposure settings (ISO, Aperture, Shutter Speed)",
+      "Sculpt subject features using single and multi-light studio setups",
+      "Pose corporate and casual clients comfortably for dynamic compositions",
+      "Retouch portraits professionally in Adobe Lightroom and Photoshop"
+    ],
+    "requirements": [
+      "A DSLR or Mirrorless camera with manual settings capability",
+      "Prime lens (50mm or 85mm) is highly recommended but not required"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Camera Controls & Manual Shooting",
+        "lessons": [
+          { "title": "Introduction to the Exposure Triangle", "duration": "12:15", "isPreview": true },
+          { "title": "Focusing Modes for Sharp Portraits", "duration": "10:40", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_6",
+    "title": "High-Performance Leadership & Team Dynamics",
+    "subtitle": "Develop emotional intelligence, master critical feedback conversations, delegate, and build high-performance cultures.",
+    "description": "Move from an individual contributor to an inspiring leader. This course provides immediately actionable frameworks for management, active listening, delegation, and coaching remote or hybrid engineering and product teams.",
+    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+    "category": "Personal Growth",
+    "level": "All Levels",
+    "duration": "6h 40m",
+    "lessonsCount": 20,
+    "price": 84.99,
+    "originalPrice": 139.99,
+    "instructorId": "inst_6",
+    "rating": 4.8,
+    "ratingCount": 540,
+    "studentCount": 11300,
+    "status": "Published",
+    "tags": ["Leadership", "Management", "Communication", "Soft Skills"],
+    "learningOutcomes": [
+      "Apply situational leadership models to guide diverse teams",
+      "Handle high-stakes performance feedback and conflict resolution",
+      "Create high psychological safety metrics inside your organization",
+      "Delegate tasks effectively using accountability metrics"
+    ],
+    "requirements": [
+      "Desire to build better interpersonal skills",
+      "Current or aspiring leadership, management, or PM role"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Psychological Safety and Trust",
+        "lessons": [
+          { "title": "What is High-Performance Leadership?", "duration": "08:12", "isPreview": true },
+          { "title": "Building Safety and Interpersonal Trust", "duration": "14:40", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_7",
+    "title": "Next.js Production Architecture & Server Actions",
+    "subtitle": "Learn App Router, Server Components, caching strategies, SEO optimization, and secure databases.",
+    "description": "Build high-performance web applications using the latest Next.js features. Discover optimization paradigms, hybrid rendering routes, edge databases, secure server actions, and deploy globally.",
+    "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+    "category": "Web Development",
+    "level": "Advanced",
+    "duration": "12h 15m",
+    "lessonsCount": 38,
+    "price": 99.99,
+    "originalPrice": 169.99,
+    "instructorId": "inst_1",
+    "rating": 4.9,
+    "ratingCount": 1120,
+    "studentCount": 24900,
+    "status": "Published",
+    "tags": ["Next.js", "React", "Server Actions", "Vercel"],
+    "learningOutcomes": [
+      "Master Server Components and Client Components optimization trade-offs",
+      "Secure Server Actions and validate payloads using Zod schemas",
+      "Configure static, dynamic, and incremental regeneration (ISR)",
+      "Set up responsive layout structures with full middleware checks"
+    ],
+    "requirements": [
+      "Strong proficiency in React and modern JavaScript",
+      "Basic command-line/terminal tools familiarity"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Next.js Core Concepts",
+        "lessons": [
+          { "title": "Introducing Next.js App Router", "duration": "11:15", "isPreview": true },
+          { "title": "RSC vs. Client Components", "duration": "18:40", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_8",
+    "title": "Design Systems with Figma: Scale Your UI",
+    "subtitle": "Build highly flexible components, variables, tokens, and multi-platform library files in Figma.",
+    "description": "Stop designing custom buttons for every new page. Learn how to architect, organize, and maintain standard UI token libraries, color tokens, semantic variables, and component sets in Figma.",
+    "thumbnail": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=1200",
+    "category": "UI/UX & Design",
+    "level": "Advanced",
+    "duration": "9h 30m",
+    "lessonsCount": 28,
+    "price": 74.99,
+    "originalPrice": 129.99,
+    "instructorId": "inst_2",
+    "rating": 4.7,
+    "ratingCount": 420,
+    "studentCount": 9800,
+    "status": "Published",
+    "tags": ["Figma", "Design Systems", "Tokens", "UI Library"],
+    "learningOutcomes": [
+      "Set up robust design tokens for spacing, typography, and color variables",
+      "Design flexible component sets with full properties, boolean states, and slots",
+      "Manage design-to-development handoffs with clean code-mapped definitions"
+    ],
+    "requirements": [
+      "Completed standard Figma bootcamp or possesses solid layout skills"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Design Tokens & Variables",
+        "lessons": [
+          { "title": "What is a Design System?", "duration": "08:10", "isPreview": true },
+          { "title": "Setting Up Brand Variables in Figma", "duration": "22:30", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_9",
+    "title": "Startup Valuation & Pitching for Venture Capital",
+    "subtitle": "Structure seed terms sheets, calculate premoney valuations, and build pitch decks that win rounds.",
+    "description": "Learn what venture capital firms look for. Master the methods of valuation, financial modeling pitches, seed terminology, options pools, liquidation preferences, and cap structures.",
+    "thumbnail": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200",
+    "category": "Business & Finance",
+    "level": "Advanced",
+    "duration": "7h 15m",
+    "lessonsCount": 18,
+    "price": 129.99,
+    "originalPrice": 229.99,
+    "instructorId": "inst_3",
+    "rating": 4.6,
+    "ratingCount": 310,
+    "studentCount": 6400,
+    "status": "Published",
+    "tags": ["Venture Capital", "Fundraising", "Pitch Deck", "Startups"],
+    "learningOutcomes": [
+      "Evaluate startups using Multiple-based and Scorecard methods",
+      "Draft, negotiate, and understand term sheets and SAFE notes",
+      "Build a clean 10-slide investor presentation deck"
+    ],
+    "requirements": [
+      "Basic understanding of startup operations and cap tables"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "The Pitch Architecture",
+        "lessons": [
+          { "title": "What Investors Look For In Teams", "duration": "14:15", "isPreview": true },
+          { "title": "Structuring the 10-Slide Deck", "duration": "18:40", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_10",
+    "title": "Modern JavaScript: Deep Dive & Design Patterns",
+    "subtitle": "Master closures, event loops, scopes, execution context, design patterns, and ESNext algorithms.",
+    "description": "Get deep under the hood of standard JavaScript runtime. Learn compiler engines, memory leaks, prototypal inheritance, custom modules, singleton design patterns, and asynchronous generators.",
+    "thumbnail": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=1200",
+    "category": "Web Development",
+    "level": "Intermediate",
+    "duration": "10h 40m",
+    "lessonsCount": 32,
+    "price": 49.99,
+    "originalPrice": 99.99,
+    "instructorId": "inst_1",
+    "rating": 4.8,
+    "ratingCount": 780,
+    "studentCount": 16100,
+    "status": "Published",
+    "tags": ["JavaScript", "ESNext", "Coding Patterns", "Performance"],
+    "learningOutcomes": [
+      "Understand standard V8 compiler optimizations",
+      "Apply async patterns, generators, and custom workers",
+      "Build modular layouts using structural design patterns"
+    ],
+    "requirements": [
+      "Basic JavaScript syntax knowledge (variables, loops, conditions)"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Under the Hood: Engine Mechanics",
+        "lessons": [
+          { "title": "Call Stack and Event Loop", "duration": "16:20", "isPreview": true },
+          { "title": "Scope Chains & Closures", "duration": "24:10", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_11",
+    "title": "Psychology-Driven Web Design & Conversion",
+    "subtitle": "Learn visual triggers, user decision mapping, typography hierarchies, and landing page wireframes.",
+    "description": "Learn the psychological drivers that turn casual landing page visitors into paying customers. Implement color triggers, cognitive bias layouts, trust markers, and clean grid conversions.",
+    "thumbnail": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&q=80&w=1200",
+    "category": "UI/UX & Design",
+    "level": "Intermediate",
+    "duration": "8h 10m",
+    "lessonsCount": 22,
+    "price": 59.99,
+    "originalPrice": 109.99,
+    "instructorId": "inst_2",
+    "rating": 4.8,
+    "ratingCount": 490,
+    "studentCount": 8900,
+    "status": "Published",
+    "tags": ["Web Design", "Conversion Rate", "Psychology", "UX"],
+    "learningOutcomes": [
+      "Apply Hick's Law, Fitts's Law, and Gestalt principles to web design",
+      "Optimize checkout funnels and form fields to minimize dropout rates",
+      "Conduct scientific A/B tests to validate visual designs"
+    ],
+    "requirements": [
+      "Basic visual literacy, familiarity with web interface norms"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Visual Cognition Fundamentals",
+        "lessons": [
+          { "title": "Hick's Law and Cognitive Friction", "duration": "10:15", "isPreview": true },
+          { "title": "Gestalt Principles in Web Layouts", "duration": "15:40", "isPreview": false }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  {
+    "id": "course_12",
+    "title": "Adobe Lightroom & Visual Storytelling",
+    "subtitle": "Develop a consistent editing style, catalog thousands of images, and export print-ready photos.",
+    "description": "A comprehensive walkthrough on Adobe Lightroom. Learn photo importing, rating workflows, color grading sliders, custom presets, tone curves, noise reductions, and raw adjustments.",
+    "thumbnail": "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=600",
+    "banner": "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=1200",
+    "category": "Photography & Video",
+    "level": "Beginner",
+    "duration": "6h 20m",
+    "lessonsCount": 16,
+    "price": 39.99,
+    "originalPrice": 79.99,
+    "instructorId": "inst_5",
+    "rating": 4.7,
+    "ratingCount": 350,
+    "studentCount": 7800,
+    "status": "Published",
+    "tags": ["Lightroom", "Photo Editing", "Raw Workflow", "Adobe"],
+    "learningOutcomes": [
+      "Construct efficient Lightroom photo catalog strategies",
+      "Master Tone Curve, HSL, and Color Grading adjustments",
+      "Create custom presets to speed up commercial workflows"
+    ],
+    "requirements": [
+      "Adobe Lightroom (Classic or CC) active subscription or trial version"
+    ],
+    "curriculum": [
+      {
+        "sectionTitle": "Lightroom Workspace Setup",
+        "lessons": [
+          { "title": "Importing and Cataloging Photos", "duration": "09:40", "isPreview": true },
+          { "title": "Lightroom CC vs Classic: Which to Use?", "duration": "08:15", "isPreview": true }
+        ]
+      }
+    ],
+    "reviews": []
+  }
+]

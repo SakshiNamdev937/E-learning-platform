@@ -1,0 +1,81 @@
+[
+  {
+    "id": "user_1",
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "mobile": "+1 (555) 234-5678",
+    "role": "Student",
+    "status": "Active",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150",
+    "joinDate": "2025-10-15",
+    "enrolledCourses": [
+      {
+        "courseId": "course_1",
+        "progress": 68,
+        "lastAccessed": "2026-07-18"
+      },
+      {
+        "courseId": "course_2",
+        "progress": 15,
+        "lastAccessed": "2026-07-10"
+      }
+    ],
+    "certificates": [
+      {
+        "id": "cert_101",
+        "courseId": "course_5",
+        "issueDate": "2026-04-05",
+        "credentialUrl": "#"
+      }
+    ]
+  },
+  {
+    "id": "user_2",
+    "name": "John Smith",
+    "email": "john@example.com",
+    "mobile": "+1 (555) 987-6543",
+    "role": "Student",
+    "status": "Active",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150",
+    "joinDate": "2026-01-20",
+    "enrolledCourses": [
+      {
+        "courseId": "course_3",
+        "progress": 100,
+        "lastAccessed": "2026-06-15"
+      }
+    ],
+    "certificates": [
+      {
+        "id": "cert_102",
+        "courseId": "course_3",
+        "issueDate": "2026-06-15",
+        "credentialUrl": "#"
+      }
+    ]
+  },
+  {
+    "id": "user_3",
+    "name": "Admin Manager",
+    "email": "admin@example.com",
+    "mobile": "+1 (555) 111-2222",
+    "role": "Admin",
+    "status": "Active",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150",
+    "joinDate": "2025-01-01",
+    "enrolledCourses": [],
+    "certificates": []
+  },
+  {
+    "id": "user_4",
+    "name": "Markus Aurelius",
+    "email": "markus@example.com",
+    "mobile": "+1 (555) 333-4444",
+    "role": "Student",
+    "status": "Suspended",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150",
+    "joinDate": "2025-05-12",
+    "enrolledCourses": [],
+    "certificates": []
+  }
+]
