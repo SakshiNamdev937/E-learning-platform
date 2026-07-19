@@ -46,6 +46,7 @@ function App() {
             {/* Student Dashboard Routes */}
             <Route path="dashboard" element={<DashboardLayout />}>
               <Route index element={<StudentDashboard />} />
+              <Route path="profile" element={<UserProfile />} />
               {/* Optional subpage fallback */}
               <Route path="courses" element={<StudentDashboard />} />
             </Route>

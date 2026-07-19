@@ -19,13 +19,13 @@ export const AdminLayout = () => {
   useEffect(() => {
     if (!isAuthenticated) {
       navigate('/login');
-    } else if (!isAdmin) {
+    } else if (!currentUser || currentUser.role?.toLowerCase() !== 'admin') {
       // Redirect students trying to access admin
       navigate('/dashboard');
     }
-  }, [isAuthenticated, isAdmin, navigate]);
+  }, [isAuthenticated, currentUser, navigate]);
 
-  if (!currentUser || currentUser.role !== 'Admin') return null;
+  if (!currentUser || currentUser.role?.toLowerCase() !== 'admin') return null;
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 

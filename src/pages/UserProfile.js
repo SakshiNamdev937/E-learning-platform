@@ -18,12 +18,14 @@ export const UserProfile = () => {
   const { courses } = useContext(CourseContext);
   const [user, setUser] = useState(null);
 
+  const userId = id || currentUser?.id;
+
   useEffect(() => {
-    const foundUser = users.find(u => u.id === id);
+    const foundUser = users.find(u => String(u.id) === String(userId));
     if (foundUser) {
       setUser(foundUser);
     }
-  }, [id, users]);
+  }, [userId, users]);
 
   if (!user) {
     return (
@@ -31,9 +33,11 @@ export const UserProfile = () => {
         <ShieldAlert className="h-12 w-12 text-rose-500 mx-auto" />
         <h2 className="text-xl font-bold text-neutral-900 font-heading">User Profile Not Found</h2>
         <p className="text-sm text-neutral-500">The user profile record does not exist or has been deleted.</p>
-        <Link to="/admin/users">
-          <Button variant="outline">Back to User Directory</Button>
-        </Link>
+        {currentUser?.role?.toLowerCase() === 'admin' && (
+          <Link to="/admin/users">
+            <Button variant="outline">Back to User Directory</Button>
+          </Link>
+        )}
       </div>
     );
   }
@@ -54,11 +58,13 @@ export const UserProfile = () => {
       
       {/* Back button & Page header */}
       <div className="flex items-center gap-3">
-        <Link to="/admin/users">
-          <button className="p-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-100/50 transition-colors text-neutral-500">
-            <ArrowLeft className="h-5 w-5" />
-          </button>
-        </Link>
+        {currentUser?.role?.toLowerCase() === 'admin' && id && (
+          <Link to="/admin/users">
+            <button className="p-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-100/50 transition-colors text-neutral-500">
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+          </Link>
+        )}
         <div>
           <h2 className="font-heading font-extrabold text-xl text-neutral-900 leading-none">Account Profile</h2>
           <span className="text-[10px] text-neutral-400 mt-1 block font-mono">User ID: {user.id}</span>

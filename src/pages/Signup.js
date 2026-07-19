@@ -20,6 +20,7 @@ export const Signup = () => {
       name: '',
       email: '',
       mobile: '',
+      role: 'Student',
       password: '',
       confirmPassword: '',
       agreeTerms: false
@@ -32,8 +33,12 @@ export const Signup = () => {
     setAuthError(null);
     setIsLoading(true);
     try {
-      signup(data.name, data.email, data.mobile);
-      navigate('/dashboard');
+      const user = signup(data.name, data.email, data.mobile, data.role);
+      if (user.role === 'Admin') {
+        navigate('/admin/courses');
+      } else {
+        navigate('/dashboard');
+      }
     } catch (err) {
       setAuthError(err.message || 'Failed to create your account.');
     } finally {
@@ -111,6 +116,20 @@ export const Signup = () => {
             }
           })}
         />
+
+        {/* Role Select Input */}
+        <div className="space-y-1.5">
+          <label className="block text-sm font-medium text-neutral-800">
+            Account Role
+          </label>
+          <select
+            className="w-full text-xs p-2.5 bg-white border border-neutral-200 rounded-lg outline-none text-neutral-800 focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 font-semibold"
+            {...register('role')}
+          >
+            <option value="Student">Student</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
 
         {/* Password Input */}
         <div className="relative">

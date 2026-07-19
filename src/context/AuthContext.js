@@ -42,8 +42,12 @@ export const AuthProvider = ({ children }) => {
       if (foundUser.status === 'Suspended') {
         throw new Error('Your account has been suspended. Please contact support.');
       }
-      setCurrentUser(foundUser);
-      return foundUser;
+      const normalizedUser = {
+        ...foundUser,
+        role: foundUser.role && foundUser.role.toLowerCase() === 'admin' ? 'Admin' : 'Student'
+      };
+      setCurrentUser(normalizedUser);
+      return normalizedUser;
     } else {
       throw new Error('Invalid email or password.');
     }
@@ -53,17 +57,18 @@ export const AuthProvider = ({ children }) => {
     setCurrentUser(null);
   };
 
-  const signup = (name, email, mobile) => {
+  const signup = (name, email, mobile, role = 'Student') => {
     const emailExists = users.some(u => u.email.toLowerCase() === email.toLowerCase());
     if (emailExists) {
       throw new Error('Email is already registered.');
     }
+    const normalizedRole = role && role.toLowerCase() === 'admin' ? 'Admin' : 'Student';
     const newUser = {
       id: `user_${Date.now()}`,
       name,
       email,
       mobile,
-      role: 'Student',
+      role: normalizedRole,
       status: 'Active',
       avatar: `https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150`, // default avatar
       joinDate: new Date().toISOString().split('T')[0],

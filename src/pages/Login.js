@@ -27,7 +27,7 @@ export const Login = () => {
     setIsLoading(true);
     try {
       const user = login(data.email, data.password);
-      if (user.role === 'Admin') {
+      if (user.role && user.role.toLowerCase() === 'admin') {
         navigate('/admin/courses');
       } else {
         navigate('/dashboard');
@@ -143,8 +143,12 @@ export const Login = () => {
         type="button"
         onClick={() => {
           // Mock login as student Jane Doe
-          login('jane@example.com', 'password');
-          navigate('/dashboard');
+          const user = login('jane@example.com', 'password');
+          if (user.role && user.role.toLowerCase() === 'admin') {
+            navigate('/admin/courses');
+          } else {
+            navigate('/dashboard');
+          }
         }}
         className="w-full flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 hover:border-neutral-300 text-xs font-semibold text-neutral-700"
       >

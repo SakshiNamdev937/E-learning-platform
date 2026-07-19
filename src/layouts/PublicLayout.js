@@ -5,9 +5,9 @@ import { useWishlist } from '../hooks/useWishlist';
 import { Avatar } from '../components/Avatar';
 import { Button } from '../components/Button';
 import { Badge } from '../components/Badge';
-import { 
-  BookOpen, Search, Menu, X, Heart, LogOut, 
-  LayoutDashboard, Shield, User, HelpCircle, Mail, MapPin, Phone 
+import {
+  BookOpen, Search, Menu, X, Heart, LogOut,
+  LayoutDashboard, Shield, User, HelpCircle, Mail, MapPin, Phone
 } from 'lucide-react';
 
 export const PublicLayout = () => {
@@ -15,7 +15,7 @@ export const PublicLayout = () => {
   const { wishlist } = useWishlist();
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -53,15 +53,14 @@ export const PublicLayout = () => {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 w-full z-40 bg-white transition-all duration-300 ${
-          isScrolled 
-            ? 'shadow-md border-b border-neutral-100 py-3' 
+        className={`fixed top-0 left-0 w-full z-40 bg-white transition-all duration-300 ${isScrolled
+            ? 'shadow-md border-b border-neutral-100 py-3'
             : 'border-b border-neutral-100 py-4'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
-            
+
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
               <div className="h-10 w-10 rounded-xl bg-primary-600 flex items-center justify-center text-white shadow-md shadow-primary-500/25 group-hover:bg-primary-700 transition-colors">
@@ -74,19 +73,17 @@ export const PublicLayout = () => {
 
             {/* Nav Menu - Desktop */}
             <nav className="hidden md:flex items-center gap-6">
-              <Link 
-                to="/" 
-                className={`text-sm font-medium hover:text-primary-600 transition-colors ${
-                  location.pathname === '/' ? 'text-primary-600' : 'text-neutral-600'
-                }`}
+              <Link
+                to="/"
+                className={`text-sm font-medium hover:text-primary-600 transition-colors ${location.pathname === '/' ? 'text-primary-600' : 'text-neutral-600'
+                  }`}
               >
                 Home
               </Link>
-              <Link 
-                to="/courses" 
-                className={`text-sm font-medium hover:text-primary-600 transition-colors ${
-                  location.pathname.startsWith('/courses') ? 'text-primary-600' : 'text-neutral-600'
-                }`}
+              <Link
+                to="/courses"
+                className={`text-sm font-medium hover:text-primary-600 transition-colors ${location.pathname.startsWith('/courses') ? 'text-primary-600' : 'text-neutral-600'
+                  }`}
               >
                 Browse Courses
               </Link>
@@ -121,7 +118,7 @@ export const PublicLayout = () => {
 
               {currentUser ? (
                 <div className="relative">
-                  <button 
+                  <button
                     onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
                     className="flex items-center gap-2 focus:outline-none"
                   >
@@ -133,8 +130,8 @@ export const PublicLayout = () => {
 
                   {profileDropdownOpen && (
                     <>
-                      <div 
-                        className="fixed inset-0 z-40" 
+                      <div
+                        className="fixed inset-0 z-40"
                         onClick={() => setProfileDropdownOpen(false)}
                       />
                       <div className="absolute right-0 mt-2.5 w-56 rounded-xl border border-neutral-200/60 bg-white p-2 shadow-lg ring-1 ring-black/5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
@@ -146,32 +143,33 @@ export const PublicLayout = () => {
                           </Badge>
                         </div>
                         <div className="py-1">
-                          <Link 
-                            to="/dashboard" 
+                          <Link
+                            to="/dashboard"
                             className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
                           >
                             <LayoutDashboard className="h-4 w-4 text-neutral-400" />
                             Dashboard
                           </Link>
                           {isAdmin && (
-                            <Link 
-                              to="/admin/courses" 
+                            <Link
+                              to="/admin/courses"
                               className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
                             >
                               <Shield className="h-4 w-4 text-neutral-400" />
                               Admin Panel
                             </Link>
                           )}
-                          <Link 
-                            to="/dashboard" 
+                          <Link
+                            to={currentUser?.role?.toLowerCase() === 'admin' ? `/admin/users/${currentUser.id}` : '/dashboard/profile'}
                             className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
+                            onClick={() => setProfileDropdownOpen(false)}
                           >
                             <User className="h-4 w-4 text-neutral-400" />
-                            My Profile
+                            <span>My Profile</span>
                           </Link>
                         </div>
                         <div className="border-t border-neutral-100 pt-1">
-                          <button 
+                          <button
                             onClick={logout}
                             className="flex items-center gap-2 w-full text-left px-3 py-2 rounded-lg text-sm text-rose-600 hover:bg-rose-50"
                           >
@@ -225,29 +223,29 @@ export const PublicLayout = () => {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-neutral-100 mt-3 px-4 pt-3 pb-4 bg-white shadow-lg space-y-3">
             <nav className="flex flex-col gap-2">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="px-3 py-2 rounded-lg text-sm font-semibold hover:bg-neutral-50 text-neutral-700"
               >
                 Home
               </Link>
-              <Link 
-                to="/courses" 
+              <Link
+                to="/courses"
                 className="px-3 py-2 rounded-lg text-sm font-semibold hover:bg-neutral-50 text-neutral-700"
               >
                 Browse Courses
               </Link>
               {currentUser && (
-                <Link 
-                  to="/dashboard" 
+                <Link
+                  to="/dashboard"
                   className="px-3 py-2 rounded-lg text-sm font-semibold hover:bg-neutral-50 text-neutral-700"
                 >
                   Student Dashboard
                 </Link>
               )}
               {currentUser?.role === 'Admin' && (
-                <Link 
-                  to="/admin/courses" 
+                <Link
+                  to="/admin/courses"
                   className="px-3 py-2 rounded-lg text-sm font-semibold hover:bg-neutral-50 text-neutral-700"
                 >
                   Admin Panel
@@ -265,7 +263,7 @@ export const PublicLayout = () => {
                       <p className="text-xs text-neutral-500 truncate">{currentUser.email}</p>
                     </div>
                   </div>
-                  <button 
+                  <button
                     onClick={logout}
                     className="flex items-center gap-2 w-full text-left px-3 py-2.5 rounded-lg text-sm text-rose-600 bg-rose-50"
                   >
@@ -297,7 +295,7 @@ export const PublicLayout = () => {
       <footer className="bg-primary-800 text-neutral-400 border-t border-neutral-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
+
             {/* Column 1: Brand Info */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-white">
@@ -358,7 +356,7 @@ export const PublicLayout = () => {
             </div>
 
           </div>
-          
+
           <div className="border-t border-neutral-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
             <p>© {new Date().getFullYear()} EduSphere, Inc. All rights reserved.</p>
             <div className="flex gap-6">
