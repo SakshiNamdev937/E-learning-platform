@@ -6,7 +6,7 @@ import { Card, CardBody } from '../components/Card';
 import { Input } from '../components/Input';
 import { Badge } from '../components/Badge';
 import { Avatar } from '../components/Avatar';
-import { 
+import {
   Plus, Search, Edit3, Trash2, X, ChevronDown, Check,
   Layers, User, BarChart, DollarSign, Calendar, SlidersHorizontal
 } from 'lucide-react';
@@ -43,7 +43,7 @@ export const AdminCourses = () => {
   };
 
   const updateSectionTitle = (sectionIdx, newTitle) => {
-    setCurriculum(prev => prev.map((sec, idx) => 
+    setCurriculum(prev => prev.map((sec, idx) =>
       idx === sectionIdx ? { ...sec, sectionTitle: newTitle } : sec
     ));
   };
@@ -103,7 +103,7 @@ export const AdminCourses = () => {
         return false;
       }
     }
-    
+
     // Category filter
     if (selectedCategory !== 'all' && course.category !== selectedCategory) {
       return false;
@@ -182,8 +182,8 @@ export const AdminCourses = () => {
 
   // Form Submit handler
   const onSubmitForm = (data) => {
-    const tagsArray = data.tagsString 
-      ? data.tagsString.split(',').map(tag => tag.trim()).filter(Boolean) 
+    const tagsArray = data.tagsString
+      ? data.tagsString.split(',').map(tag => tag.trim()).filter(Boolean)
       : [];
 
     const outcomesArray = data.learningOutcomesString
@@ -229,14 +229,14 @@ export const AdminCourses = () => {
 
   return (
     <div className="space-y-6">
-      
+
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-neutral-200/80 pb-4">
         <div>
           <h2 className="font-heading font-extrabold text-xl text-neutral-900 leading-tight">Course Inventory</h2>
           <p className="text-xs text-neutral-500">Create, update, and manage student learning curriculums.</p>
         </div>
-        <Button 
+        <Button
           onClick={openCreateModal}
           iconLeft={<Plus className="h-4.5 w-4.5" />}
           className="shadow-sm hover:shadow-md"
@@ -247,7 +247,7 @@ export const AdminCourses = () => {
 
       {/* Filters Bar */}
       <div className="bg-white border border-neutral-200/80 rounded-xl p-4 shadow-sm flex flex-col sm:flex-row gap-4 items-center justify-between">
-        
+
         {/* Search box */}
         <div className="relative w-full sm:max-w-xs">
           <Search className="absolute left-3 top-3 h-4 w-4 text-neutral-400" />
@@ -262,7 +262,7 @@ export const AdminCourses = () => {
 
         {/* Droplist filters */}
         <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
-          
+
           {/* Category */}
           <div className="flex items-center gap-1.5 text-xs text-neutral-500">
             <span>Category:</span>
@@ -305,7 +305,7 @@ export const AdminCourses = () => {
         <div className="bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
-              
+
               <thead className="bg-neutral-50 text-neutral-500 font-bold uppercase tracking-wider border-b border-neutral-100">
                 <tr>
                   <th className="p-4">Course Info</th>
@@ -323,13 +323,13 @@ export const AdminCourses = () => {
                   const instructor = instructors.find(i => i.id === course.instructorId);
                   return (
                     <tr key={course.id} className="hover:bg-neutral-50/40">
-                      
+
                       {/* Title & Thumbnail */}
                       <td className="p-4 max-w-sm">
                         <div className="flex items-center gap-3">
-                          <img 
-                            src={course.thumbnail} 
-                            alt={course.title} 
+                          <img
+                            src={course.thumbnail}
+                            alt={course.title}
                             className="h-10 w-14 rounded object-cover border border-neutral-100 flex-shrink-0"
                           />
                           <div className="min-w-0">
@@ -364,7 +364,7 @@ export const AdminCourses = () => {
 
                       {/* Pricing */}
                       <td className="p-4 whitespace-nowrap font-bold text-neutral-900">
-                        ${course.price}
+                        ₹ {course.price}
                       </td>
 
                       {/* Status */}
@@ -408,13 +408,13 @@ export const AdminCourses = () => {
       {formModalOpen && (
         <div className="fixed inset-0 z-50 bg-neutral-950/40 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white border border-neutral-200 rounded-2xl max-w-xl w-full max-h-[85vh] flex flex-col shadow-xl animate-in scale-in duration-200">
-            
+
             <header className="p-5 border-b border-neutral-100 flex items-center justify-between">
               <h3 className="font-heading font-extrabold text-base text-neutral-900">
                 {editingCourseId ? 'Edit Course Curriculums' : 'Create Course Curriculum'}
               </h3>
-              <button 
-                onClick={() => setFormModalOpen(false)} 
+              <button
+                onClick={() => setFormModalOpen(false)}
                 className="p-1.5 rounded-lg hover:bg-neutral-100 text-neutral-500"
               >
                 <X className="h-5 w-5" />
@@ -422,7 +422,7 @@ export const AdminCourses = () => {
             </header>
 
             <form onSubmit={handleSubmit(onSubmitForm)} className="flex-grow overflow-y-auto p-5 space-y-4 custom-scrollbar">
-              
+
               {/* Row: Title */}
               <Input
                 label="Course Title *"
@@ -454,7 +454,7 @@ export const AdminCourses = () => {
 
               {/* Grid: Category and Instructor */}
               <div className="grid grid-cols-2 gap-4">
-                
+
                 <div className="space-y-1.5">
                   <label className="block text-sm font-medium text-neutral-800">Category *</label>
                   <select
@@ -479,7 +479,7 @@ export const AdminCourses = () => {
 
               {/* Grid: Level, Status */}
               <div className="grid grid-cols-2 gap-4">
-                
+
                 <div className="space-y-1.5">
                   <label className="block text-sm font-medium text-neutral-800">Difficulty Level</label>
                   <select
@@ -593,10 +593,10 @@ export const AdminCourses = () => {
                   <label className="block text-sm font-bold text-neutral-800">
                     Course Curriculum Builder
                   </label>
-                  <Button 
-                    type="button" 
-                    variant="outline" 
-                    size="xs" 
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="xs"
                     onClick={addSection}
                     iconLeft={<Plus className="h-3.5 w-3.5" />}
                   >

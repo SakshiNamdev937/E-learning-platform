@@ -8,8 +8,8 @@ import { Card, CardBody } from '../components/Card';
 import { Button } from '../components/Button';
 import { Badge } from '../components/Badge';
 import { Avatar } from '../components/Avatar';
-import { 
-  PlayCircle, Clock, Heart, Award, ArrowLeft, Star, 
+import {
+  PlayCircle, Clock, Heart, Award, ArrowLeft, Star,
   HelpCircle, ChevronDown, ChevronUp, Check, ShieldAlert,
   Share2, FileText, Infinity, Smartphone, Send
 } from 'lucide-react';
@@ -35,7 +35,7 @@ export const CourseDetail = () => {
       setCourse(foundCourse);
       const foundInst = getInstructorById(foundCourse.instructorId);
       setInstructor(foundInst);
-      
+
       // Auto expand first section by default
       if (foundCourse.curriculum?.length > 0) {
         setActiveSections({ 0: true });
@@ -86,7 +86,7 @@ export const CourseDetail = () => {
       navigate('/login');
       return;
     }
-    
+
     if (reviewComment.trim()) {
       addReview(course.id, {
         userName: currentUser.name,
@@ -116,12 +116,12 @@ export const CourseDetail = () => {
 
   return (
     <div className="space-y-10 pb-20">
-      
+
       {/* 1. Header Banner */}
       <section className="bg-neutral-900 text-white py-12 sm:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(124,58,237,0.1),transparent)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           <div className="lg:col-span-8 space-y-4">
             <Link to="/courses" className="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
               <ArrowLeft className="h-4 w-4" />
@@ -173,10 +173,10 @@ export const CourseDetail = () => {
 
       {/* 2. Page Content Layout */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative">
-        
+
         {/* Left Column: Details */}
         <div className="lg:col-span-8 space-y-8">
-          
+
           {/* What You'll Learn block */}
           <div className="border border-neutral-200/80 bg-white rounded-xl p-6 shadow-sm space-y-4">
             <h2 className="font-heading font-bold text-lg text-neutral-900">What You'll Learn</h2>
@@ -220,7 +220,7 @@ export const CourseDetail = () => {
                       </div>
                       {isOpen ? <ChevronUp className="h-4.5 w-4.5 text-neutral-500" /> : <ChevronDown className="h-4.5 w-4.5 text-neutral-500" />}
                     </button>
-                    
+
                     {isOpen && (
                       <div className="border-t border-neutral-100 divide-y divide-neutral-100">
                         {section.lessons.map((lesson, lIdx) => (
@@ -259,7 +259,7 @@ export const CourseDetail = () => {
           {instructor && (
             <div className="border border-neutral-200/80 bg-white rounded-xl p-6 shadow-sm space-y-4">
               <h2 className="font-heading font-bold text-lg text-neutral-900">Your Instructor</h2>
-              
+
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
                 <Avatar src={instructor.avatar} name={instructor.name} size="xl" />
                 <div className="space-y-2">
@@ -267,13 +267,13 @@ export const CourseDetail = () => {
                     <h3 className="font-heading font-bold text-base text-neutral-900 leading-tight">{instructor.name}</h3>
                     <p className="text-xs text-neutral-500">{instructor.designation}</p>
                   </div>
-                  
+
                   <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-xs text-neutral-500 font-semibold">
                     <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" /> {instructor.rating} Instructor Rating</span>
                     <span>{instructor.courseCount} Courses</span>
                     <span>{instructor.studentCount.toLocaleString()} Students</span>
                   </div>
-                  
+
                   <p className="text-xs text-neutral-600 leading-relaxed">
                     {instructor.bio}
                   </p>
@@ -289,7 +289,7 @@ export const CourseDetail = () => {
             {/* Add Review Panel */}
             <div className="border border-neutral-200 rounded-xl p-6 bg-white shadow-sm space-y-4">
               <h3 className="text-sm font-bold text-neutral-900">Leave a Review</h3>
-              
+
               {reviewSuccess && (
                 <div className="bg-emerald-50 text-emerald-700 border border-emerald-100 p-3 rounded-lg text-xs font-semibold">
                   Thank you! Your mock review has been successfully posted.
@@ -301,7 +301,7 @@ export const CourseDetail = () => {
                   <span>Rating:</span>
                   <RatingStars rating={reviewRating} size="md" interactive={true} onChange={setReviewRating} />
                 </div>
-                
+
                 <div className="relative">
                   <textarea
                     rows="3"
@@ -361,7 +361,7 @@ export const CourseDetail = () => {
                         {rc.title}
                       </h3>
                       <div className="flex items-center justify-between text-[10px] border-t border-neutral-50 pt-2 font-bold text-neutral-800">
-                        <span>${rc.price}</span>
+                        <span>₹ {rc.price}</span>
                         <div className="flex items-center gap-0.5 text-amber-400">
                           <Star className="h-3 w-3 fill-amber-400" />
                           <span>{rc.rating}</span>
@@ -391,12 +391,12 @@ export const CourseDetail = () => {
             </div>
 
             <CardBody className="p-6 space-y-6">
-              
+
               {/* Pricing banner */}
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-extrabold text-neutral-900">${course.price}</span>
+                <span className="text-3xl font-extrabold text-neutral-900">₹ {course.price}</span>
                 {course.originalPrice && (
-                  <span className="text-sm text-neutral-400 line-through font-semibold">${course.originalPrice}</span>
+                  <span className="text-sm text-neutral-400 line-through font-semibold">₹ {course.originalPrice}</span>
                 )}
                 {course.originalPrice && (
                   <Badge variant="secondary" className="ml-auto text-[10px]">
@@ -407,7 +407,7 @@ export const CourseDetail = () => {
 
               {/* Enrollment CTA Button */}
               <div className="space-y-2.5">
-                <Button 
+                <Button
                   onClick={handleEnrollClick}
                   className="w-full py-3.5 text-sm font-bold shadow-md shadow-primary-500/10"
                 >
@@ -415,17 +415,17 @@ export const CourseDetail = () => {
                 </Button>
 
                 <div className="grid grid-cols-2 gap-2">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="flex items-center gap-1.5 text-xs py-2.5 justify-center"
                     onClick={() => toggleWishlist(course.id)}
                   >
                     <Heart className={`h-4.5 w-4.5 ${isWishlisted ? 'fill-rose-500 text-rose-500' : ''}`} />
                     <span>{isWishlisted ? 'Wishlisted' : 'Wishlist'}</span>
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="flex items-center gap-1.5 text-xs py-2.5 justify-center relative"
                     onClick={handleShareClick}
                   >
@@ -438,7 +438,7 @@ export const CourseDetail = () => {
               {/* Course Features details list */}
               <div className="space-y-3.5 pt-2 border-t border-neutral-100">
                 <h4 className="text-xs font-bold text-neutral-800 uppercase tracking-wide">This course includes:</h4>
-                
+
                 <ul className="space-y-2.5 text-xs text-neutral-600">
                   <li className="flex items-center gap-2.5">
                     <Clock className="h-4 w-4 text-neutral-400" />

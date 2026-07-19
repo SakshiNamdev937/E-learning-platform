@@ -400,7 +400,7 @@ export const Home = () => {
                   <div className="flex items-center justify-between border-t border-neutral-100 pt-3">
                     <div>
                       <span className="text-base font-extrabold text-primary-900">
-                        ${course.price}
+                        ₹ {course.price}
                       </span>
                       {course.originalPrice && (
                         <span className="text-xs text-primary-400 line-through ml-1.5">
@@ -409,7 +409,7 @@ export const Home = () => {
                       )}
                     </div>
                     <Link to={`/courses/${course.id}`}>
-                      <Button variant="secondary" size="sm">
+                      <Button variant="secondary" size="md">
                         Enroll
                       </Button>
                     </Link>
